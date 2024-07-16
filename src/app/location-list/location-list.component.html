@@ -1,5 +1,8 @@
-<ul>
+<div class="global-container">
     @for (location of locations() ; track location.id) {
-        <li>{{ location.title }}</li>
+    <a class="card-container" href="http://localhost:4200/location/{{ location.id }}" >
+        <img src="{{ location.cover }}" />
+        <div class="homeCardTitle">{{ location.title }}</div>
+    </a>
     }
-</ul>
+</div>
