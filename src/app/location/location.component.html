@@ -1,2 +1,37 @@
 <p>ID {{id}}</p>
 
+<div class="global-container">
+    @for (location of locations() ; track location.id) {
+        @if ( location.id == id) {
+
+            <main>
+                <div class="global-container">
+                  <div class="galery">
+                    <button >&larr;</button>
+                    <img class="galeryImg" src={{location.cover}}>
+                    <button >&#x2192;</button>
+                  </div>
+                  <div class="mid-container">    
+                    <div class="info-container">
+                      <div class="title">{{ location.title }}</div>
+                      <div class="location">{{ location.location }}</div>
+                      <div class="tags-container">
+                        <div class="tags">{{ location.tags }}</div>
+                      </div>
+                    </div>
+                    <div class="hostAndRating-container">
+                      <div class="host-container">
+                        
+                      </div>
+                      <div class="rating">{{ location.rating }} étoiles</div>
+                    </div>
+                  </div>
+                  <div class="bottom-container">
+                  </div>     
+                </div>
+              </main>
+            
+        }
+    }
+</div>
+
