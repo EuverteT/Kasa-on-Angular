@@ -8,6 +8,6 @@ export interface Location {
     rating: number;
     location: string;
     equipments: object;
-    tags: object;
+    tags: Array<string>;
 
 }

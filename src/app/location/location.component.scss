@@ -1,0 +1,125 @@
+@import "../../styles.scss";
+
+.galery {
+  @include flexRowJCCenter;
+}
+
+.galeryImg {
+  width: 70%;
+  height: 500px;
+  @include small {
+    width: 90%;
+    height: 300px;
+  }
+  @include verySmall {
+    width: 90%;
+    height: 300px;
+  }
+}
+
+.galeryBtnLeft,
+.galeryBtnRight {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 10rem;
+  @include small {
+    font-size: 3rem;
+  }
+  @include verySmall {
+    font-size: 1.5rem;
+  }
+}
+
+.global-container {
+  @include flexColumn;
+  color: $rouge;
+  margin: 0 5rem;
+  @include small {
+    margin: 0 1rem;
+  }
+  @include verySmall {
+    margin: 0 1rem;
+  }
+}
+
+img {
+  max-height: 400px;
+  align-self: center;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.mid-container {
+  @include flexRowJCBetween;
+  @include small {
+    flex-direction: column;
+  }
+  @include verySmall {
+    flex-direction: column;
+  }
+}
+
+.bottom-container {
+  @include flexRowJCBetween;
+  @include small {
+    flex-direction: column;
+    align-items: center;
+  }
+  @include verySmall {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.hostAndRating-container {
+  padding: 1rem;
+  @include small {
+    @include flexRowAICenter;
+    justify-content: space-around;
+  }
+  @include verySmall {
+    @include flexRowAICenter;
+    justify-content: space-around;
+  }
+}
+
+.host-container {
+  @include flexRowAICenter;
+  .host {
+    margin-right: 1rem;
+  }
+  img {
+    height: 50px;
+    width: 50px;
+    border-radius: 2rem;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.tags-container {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem 0;
+  @include verySmall {
+    flex-wrap: wrap;
+  }
+}
+
+.tags {
+  margin-right: 1rem;
+  background-color: $rouge;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  @include verySmall {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
