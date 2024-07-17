@@ -1,13 +1,20 @@
+import { Observable } from "rxjs";
+
 export interface Location {
     id: number;
     title: string;
     cover: string;
-    pictures: string;
+    pictures: Array<string>;
     description: string;
-    host: object;
+    host: Host;
     rating: number;
     location: string;
-    equipments: object;
+    equipments: Array<string>;
     tags: Array<string>;
 
+}
+
+export interface Host {
+    name: string;
+    picture: string;
 }

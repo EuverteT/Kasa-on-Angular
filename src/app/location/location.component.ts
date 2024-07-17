@@ -15,7 +15,6 @@ export class LocationComponent implements OnInit{
 
   private locationService = inject(LocationService);
   locations = this.locationService.locations;
-
   id = 0
   private route = inject(ActivatedRoute);
 
@@ -27,5 +26,4 @@ export class LocationComponent implements OnInit{
     };
   
   
-
 }
