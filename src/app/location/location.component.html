@@ -28,6 +28,31 @@
         </div>
       </div>
       <div class="bottom-container">
+
+        <div class="component">
+          <div class="component-title">
+              <div>Description</div>
+              <button class="notExpand-button">&uarr;</button>
+              <button class="expand-button">&darr;</button>
+          </div>
+          <div class="description">
+            <div >{{ location.description }}</div>
+          </div>
+        </div>
+
+        <div class="component">
+          <div class="component-title">
+              <div>Equipements</div>
+              <button class="notExpand-button">&uarr;</button>
+              <button class="expand-button">&darr;</button>
+          </div>
+          <div class="equipments">
+            @for (equipment of location.equipments ; track $index) {
+              <div > {{equipment}} </div>
+            }
+          </div>
+        </div>
+
       </div>
     </div>
   </main>

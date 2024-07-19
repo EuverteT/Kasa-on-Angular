@@ -1,3 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
 @import "variables.scss";
 @import "mixins.scss";
+
+a
+{
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  transition: 0.4s;
+  color: $rouge;
+}
+
+.component {
+  width: 47%;
+  @include small {
+    width: 100%;
+  }
+  @include verySmall {
+    width: 100%;
+  }
+}
+
+.component-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $rouge;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.expand-button,
+.notExpand-button {
+  background-color: $rouge;
+  border: none;
+  color: white;
+  font-size: 2rem;
+}
+
+.description,
+.equipments {
+  background-color: $mid-grey;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
