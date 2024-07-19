@@ -1,10 +1,20 @@
+@import "../../styles.scss";
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 1rem;
+  @include verySmall {
+    flex-direction: column;
+    margin: 0rem;
+  }
   
-  nav  { 
+  nav  {
+    @include flexRowAICenter;
+    @include verySmall {
+    flex-direction: column;
+    }
     a {
       font-size: 1.5rem;
       font-weight: 800;
@@ -13,6 +23,19 @@
       text-decoration: none;
       color: black;
       border-radius: 0.5rem;
+
+      @include verySmall {
+        margin: 1rem 0;
+        width: 100vw;
+        text-align: center;
+        padding: 0;
+        margin: 0.2rem 0;
+        border-radius: 0;
+      }
+
+      &:hover {
+      background: $hard-grey;
+      }
     }
   }
 }
