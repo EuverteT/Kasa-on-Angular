@@ -5,9 +5,11 @@
   <main>
     <div class="global-container">
       <div class="galery">
-        <button (click)="prev()" class="galeryBtnLeft">&larr;</button>
+        @if(location.pictures.length > 1 == true) {
+        <button (click)="prev()" class="galeryBtnLeft">&larr;</button>}
         <img class="galeryImg" src={{location.pictures[pictureIndex]}}>
-        <button (click)="next()" class="galeryBtnRight">&#x2192;</button>
+        @if(location.pictures.length > 1 == true) {
+        <button (click)="next()" class="galeryBtnRight">&#x2192;</button>}
       </div>
       <div class="mid-container">
         <div class="info-container">
