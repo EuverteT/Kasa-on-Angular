@@ -16,9 +16,11 @@ export class LocationComponent implements OnInit {
   private locationService = inject(LocationService);
   locations = this.locationService.locations;
   private route = inject(ActivatedRoute);
-  
+
   id = 0
   pictureIndex = 0
+  openDescription = true;
+  openEquipments = true;
 
   ngOnInit() {
     this.id = +this.route.snapshot.paramMap.get('id')!;
@@ -26,6 +28,9 @@ export class LocationComponent implements OnInit {
     this.locationService.getLocations().subscribe();
 
     this.pictureIndex = 0;
+
+    this.openDescription = true;
+    this.openEquipments = true;
 
   };
 
@@ -47,6 +52,22 @@ export class LocationComponent implements OnInit {
     if (this.pictureIndex == (arrayLength)) {
       this.pictureIndex = 0;
     }
+  }
+
+  closeEquipmentsDetails() {
+    this.openEquipments = false;
+  }
+
+  openEquipmentsDetails() {
+    this.openEquipments = true;
+  }
+
+  closeDescriptionDetails() {
+    this.openDescription = false;
+  }
+
+  openDescriptionDetails() {
+    this.openDescription = true;
   }
 
 }

@@ -22,7 +22,7 @@
         <div class="hostAndRating-container">
           <div class="host-container">
             <div class="host">{{ location.host.name }}</div>
-            <img src={{location.host.picture}} >
+            <img src={{location.host.picture}}>
           </div>
           <div class="rating">{{ location.rating }} étoiles</div>
         </div>
@@ -31,26 +31,34 @@
 
         <div class="component">
           <div class="component-title">
-              <div>Description</div>
-              <button class="notExpand-button">&uarr;</button>
-              <button class="expand-button">&darr;</button>
+            <div>Description</div>
+            @if(openDescription == true) {
+            <button (click)="closeDescriptionDetails()" class="notExpand-button">&uarr;</button>}
+            @if(openDescription == false) {
+            <button (click)="openDescriptionDetails()" class="expand-button">&darr;</button>}
           </div>
+          @if(openDescription == true) {
           <div class="description">
-            <div >{{ location.description }}</div>
+            <div>{{ location.description }}</div>
           </div>
+          }
         </div>
 
         <div class="component">
           <div class="component-title">
-              <div>Equipements</div>
-              <button class="notExpand-button">&uarr;</button>
-              <button class="expand-button">&darr;</button>
+            <div>Equipements</div>
+            @if(openEquipments == true) {
+            <button (click)="closeEquipmentsDetails()" class="notExpand-button">&uarr;</button>}
+            @if(openEquipments == false) {
+            <button (click)="openEquipmentsDetails()" class="expand-button">&darr;</button>}
           </div>
+          @if(openEquipments == true) {
           <div class="equipments">
             @for (equipment of location.equipments ; track $index) {
-              <div > {{equipment}} </div>
+            <div> {{equipment}} </div>
             }
           </div>
+          }
         </div>
 
       </div>
