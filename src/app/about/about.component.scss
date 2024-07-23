@@ -1,0 +1,12 @@
+@import "../../styles.scss";
+
+.about-container {
+    @include flexColumn;
+    align-items: center;
+  }
+  
+  .component {
+    margin-bottom: 2rem;
+    width: 90%;
+    color: $rouge;
+  }

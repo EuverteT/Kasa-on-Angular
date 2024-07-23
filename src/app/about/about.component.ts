@@ -14,5 +14,13 @@ export class AboutComponent implements OnInit{
 
   ngOnInit() {
     this.aboutService.getAbouts().subscribe();
+  };
+
+  closeText() {
+    console.log("test");
+  };
+
+  openText() {
+    console.log("test");
   }
 }

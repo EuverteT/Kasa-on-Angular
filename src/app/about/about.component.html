@@ -1,6 +1,17 @@
-<p>Test du composant avec Service et Interface</p>
-<div>
+<div class="about-container">
+
     @for (about of abouts() ; track about.name) {
-        <div>{{ about.name }}</div>
+    <div class="component">
+
+        <div class="component-title">
+            <div>{{ about.name }}</div>
+            <button id={{about.notExpandBtn}} (click)="closeText()" class="notExpand-button">&uarr;</button>
+            <button id={{about.expandBtn}} (click)="openText()" class="expand-button">&darr;</button>
+        </div>
+        <div class="description">
+            <div>{{ about.text }}</div>
+        </div>
+    </div>
+
     }
 </div>
