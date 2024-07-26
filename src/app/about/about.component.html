@@ -4,14 +4,19 @@
     <div class="component">
 
         <div class="component-title">
-            <div>{{ about.name }}</div>
-            <button id={{about.notExpandBtn}} (click)="closeText()" class="notExpand-button">&uarr;</button>
-            <button id={{about.expandBtn}} (click)="openText()" class="expand-button">&darr;</button>
+            <div>{{ about.title }}</div>
+            @if(about.expandBtn == false) {
+            <button (click)="closeText(about)" class="notExpand-button">&uarr;</button>
+            }
+            @if(about.notExpandBtn == false) {
+            <button (click)="openText(about)" class="expand-button">&darr;</button>
+            }
         </div>
+        @if(about.expandBtn == false) {
         <div class="description">
             <div>{{ about.text }}</div>
         </div>
+        }
     </div>
-
     }
 </div>
