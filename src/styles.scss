@@ -15,6 +15,32 @@ a
   color: $rouge;
 }
 
+.banner {
+  @include flexColumn;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+
+  span {
+    color: white;
+    position: absolute;
+    font-size: 3rem;
+    @include verySmall {
+    font-size: 1.5rem;
+    }
+    @include small {
+    font-size: 2rem;
+    }
+  }
+}
+
+.banner img {
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+  border-radius: 1rem
+}
+
 .component {
   width: 47%;
   @include small {
